@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    
+}
+
+.headingMain { 
+     font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 50px;
+  font-style: bold;
+  color: rgb(17, 20, 20);
+  position:absolute;
+  top:30%;
+  left:30%;
+}
+
+.inputMain {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  position: absolute;
+  top:40%;
+  left:33%;
+}
+
+.boxMain {
+  position: absolute;
+  top:40%;
+  left:33%;
+  width: 80%;
+}
+
+.items {
+      position: absolute;
+  top:53%;
+  left:33%;
+  width: 600px;
+}
