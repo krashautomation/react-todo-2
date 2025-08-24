@@ -1,6 +1,6 @@
 import React from 'react'
 import './Main.css'
-import { Box,TextField, Button, Stack } from "@mui/material";
+import { Box, TextField, Button, Stack } from "@mui/material";
 import Todo from '../Todo/Todo';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -42,14 +42,14 @@ export default function Main(props) {
         setItems(newItems);
     }
 
-
-       // Add this function for Enter key handling
+    // Add this function for Enter key handling
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
             e.preventDefault(); // Prevent form submission behavior
             addItem(itemText);
         }
     }
+
     return (
         <div className='main-page'>
             <h1 className='headingMain'>What's on Your To Do List?</h1>
@@ -60,6 +60,9 @@ export default function Main(props) {
                     mx: "auto",
                     mt: "5",
                     p: 2,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
                 }}
                 className='boxMain'>
 
@@ -74,7 +77,12 @@ export default function Main(props) {
                     />
                     <Button variant="contained" onClick={() => addItem(itemText)}>Add</Button>
                 </Stack>
+
+
+
             </Box>
+
+          
 
             <br></br>
 
@@ -88,7 +96,32 @@ export default function Main(props) {
                         />
                     )
                 })}
+
+                 {items.length > 0 && (
+           
+                   <Box 
+  display="flex" 
+  justifyContent="center" 
+  mt={2}
+>
+  <Button 
+    variant="contained" 
+    color="error" 
+    onClick={() => setItems([])}
+    sx={{ 
+      minWidth: '120px',
+      py: 1,
+      px: 3
+    }}
+  >
+    Clear List
+  </Button>
+</Box>
+                
+            )}
             </div>
+
+ 
         </div>
     )
 }
