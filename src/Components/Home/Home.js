@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
 
-<Container fluid className="vh-100 d-flex justify-content-center align-items-center white">
+<Container fluid className="home-page vh-100 d-flex justify-content-center align-items-center">
       <Row>
         <Col className="text-center text-white">
           <h1 className='headingHome'>The ToDo List 2.0</h1>

@@ -51,7 +51,7 @@ export default function Main(props) {
         }
     }
     return (
-        <div>
+        <div className='main-page'>
             <h1 className='headingMain'>What's on Your To Do List?</h1>
 
             <Box
